@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="./resources/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!-- Bootstrap Font Icon CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <script src="https://kit.fontawesome.com/ad684dd1c9.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/cesiumjs/1.78/Build/Cesium/Cesium.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="https://kit.fontawesome.com/ad684dd1c9.js" crossorigin="anonymous"></script>
+
+</head>
+  <body class="">
+    <div class="row">
+        <div class="col-xl-12 p-0 m-0">
+            <div class="header d-flex justify-content-between border-bottom border-warning bg-white">
+                <div class="logo d-flex align-items-center">
+                    <img src="./resources/images/Lexitas-logo-new-gray.png" class="p-2 ms-3" width="210" height="70">
+                    <div class="vr mt-2"></div>
+                    <h3 class="p-3 text-secondary">PROJECT MANAGEMENT</h3>
+                </div>
+                <div class="user d-flex align-items-center me-4">
+                    <p class="mt-3 me-1">Brooklyn Simmons</p>
+                    <img class="rounded-circle" src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Z3V5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500" width="45" height="45" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-12 p-0 m-0">
+            <div class="d-flex flex-row-reverse align-items-center py-3 bg-white">
+                <a class="text-decoration-none me-5 text-secondary"  href="">LOGOUT</a>
+                <a class="text-decoration-none me-4 text-secondary" href="">ADD PROJECT</a>
+                <a class="text-decoration-none me-4 text-secondary" href="./dashboard.html">HOME</a>
+            </div>
+        </div>
+        <div class="col-xl-12 p-0 m-0">
+            <div class="row bg-white mx-5 my-3 p-3">
+                <div class="col-xl-12 header d-flex justify-content-between align-items-center mb-3">
+                    <h5>Add Project</h5>
+                    <div>
+                        <a href="./dashboard.html" class="btn btn-secondary rounded-0"><i class="fa-solid fa-arrow-left text-white me-2 "></i>Back</a>
+                        <a href="./addTask.html" class="ms-3 active text-white btn btn-secondary rounded-0 border-0"><i class="bi bi-plus fa-lg"></i>TASK</a>
+                    </div>
+                </div>
+                <div class="col-xl-12">
+                    <div class="row">
+                        <div class="col-xl-6 d-flex flex-column" >
+                            <label for="" class="form-label">Project Name</label>    
+                            <select class="form-select  rounded-0" aria-label="Default select example">
+                                <option value="" selected>Select</option>
+                                <option>Project1- Lexinberg</option>
+                                <option>Project2-Washington</option>
+                                <option>Project3-Las Vegas</option>
+                                <option>Project4-Boston</option>
+                                <option>Project5-Boston</option>
+                              </select>       
+                        </div>
+                        <div class="col-xl-3 d-flex flex-column" >
+                            <label for="" class="form-label">Status</label>    
+                            <select class="form-select  rounded-0" aria-label="Default select example">
+                                <option value="" selected>Select</option>
+                                <option>Active</option>
+                                <option>Delayed</option>
+                                <option>Not Started</option>
+                                <option>Completed</option>
+                              </select>       
+                        </div>
+                    </div>                   
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-12 p-0 m-0">
+                    <div class="d-flex flex-row justify-content-between mx-5 bg-white gantt-controls ">
+                        <div class=" d-flex flex-column mt-3 ms-4 fs-6">
+                            <p class="p-0 m-0 text-secondary">Project Name</p>
+                            <p class="fw-bold"> Project-1 Lexinberg</p>
+                        </div>
+                        <div class="d-flex flex-column mt-3 fs-6 ">
+                            <p class="p-0 m-0 text-secondary">Start Date</p>
+                            <p class="fw-bold"> 1-22-2022</p>
+                        </div>
+                        <div class="d-flex flex-column mt-3 fs-6">
+                            <p class="p-0 m-0 text-secondary">End Date</p>
+                            <p class="fw-bold"> 2-22-2022</p>
+                        </div>
+                        <div class="d-flex flex-row mt-3 ms-5">
+                            <div class="rounded-pill bg-warning text-white me-2"><p class="ms-4 pt-2">Active</p></div></td>
+                            <div class="rounded-pill bg-danger bg-opacity-50 me-2 text-white"><p class="ms-4 pt-2">Delayed</p></div>
+                            <div class="rounded-pill bg-secondary text-white me-2"><p class="ms-2 pt-2">Not started</p></div>
+                            <div class="rounded-pill bg-success text-white me-2"><p class="ms-2 pt-2">Completed</p></div>
+                        </div>
+                        <div class="mt-3 mx-4 icons d-flex flex-row justify-content-center">
+                            <div class="active mb-5 p-1"><i class="fa-solid fa-chart-bar fa-xl me-3 text-white"></i></div>
+                            <div class="mb-5 p-1"><i class="fa-solid fa-table-list fa-xl"></i></div>
+                        </div>                 
+                    </div>
+                    
+            <div class="col-xl-12">
+                <div class="row bg-white mx-5">
+                    <div class="col-xl-3">
+                        <div class="row mt-5 pt-2">
+                            <div class="col-xl-12 invisible">Projects</div>
+                            <div class="col-xl-12 mb-2">
+                                <div class="row bg-warning rounded-pill w-100 ms-1 p1">
+                                    <div class="col-xl-1 d-flex align-items-center"><i class="fa-solid fa-ellipsis-vertical text-white fa-xl" id="dropdownMenuButton1" data-bs-toggle="dropdown"></i>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                                            <li><a class="dropdown-item" href="#">Delete</a></li>
+                                          </ul></div>
+                                    <div class="col-xl-11 p-0 m-0">
+                                        <div class="row">
+                                            <div class="col-xl-12 text-white">Task 3 Development- Phase 2</div>
+                                            <div class="col-xl-12 text-white">5-10-22 <i class="fa-solid fa-arrows-left-right text-white"></i> 9-11-22  <span class="me-2"></span>Jacob James</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-12 mb-2">
+                                <div class="row bg-danger opacity-50 rounded-pill w-100 ms-1 p1">
+                                    <div class="col-xl-1 d-flex align-items-center"><i class="fa-solid fa-ellipsis-vertical text-white fa-xl" id="dropdownMenuButton1" data-bs-toggle="dropdown"></i>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                                            <li><a class="dropdown-item" href="#">Delete</a></li>
+                                          </ul></div>
+                                    <div class="col-xl-11 p-0 m-0">
+                                        <div class="row">
+                                            <div class="col-xl-12 text-white">Task 2 Development- Phase 1</div>
+                                            <div class="col-xl-12 text-white">3-10-22 <i class="fa-solid fa-arrows-left-right text-white "></i> 5-10-22  <span class="me-2"></span>Jenny Wislon</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-12 mb-2">
+                                <div class="row bg-secondary rounded-pill w-100 ms-1 p1">
+                                    <div class="col-xl-1 d-flex align-items-center"><i class="fa-solid fa-ellipsis-vertical text-white fa-xl" id="dropdownMenuButton1" data-bs-toggle="dropdown"></i>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                                            <li><a class="dropdown-item" href="#">Delete</a></li>
+                                          </ul></div>
+                                    <div class="col-xl-11 p-0 m-0">
+                                        <div class="row">
+                                            <div class="col-xl-12 text-white">Task 4- UAT</div>
+                                            <div class="col-xl-12 text-white">5-1-22 <i class="fa-solid fa-arrows-left-right text-white"></i> 5-30-22  <span class="me-2"></span>Devon Lane</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-12 mb-2">
+                                <div class="row bg-success rounded-pill w-100 ms-1 p1">
+                                    <div class="col-xl-1 d-flex align-items-center"><i class="fa-solid fa-ellipsis-vertical text-white fa-xl" id="dropdownMenuButton1" data-bs-toggle="dropdown"></i>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                                            <li><a class="dropdown-item" href="#">Delete</a></li>
+                                          </ul></div>
+                                    <div class="col-xl-11 p-0 m-0">
+                                        <div class="row">
+                                            <div class="col-xl-12 text-white">Task 1- Discovery</div>
+                                            <div class="col-xl-12 text-white">1-10-22 <i class="fa-solid fa-arrows-left-right text-white"></i> 1-21-22  <span class="me-2"></span>Jerome Bell</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        </div>
+                    </div>
+                    <div class="col-xl-9 gantt-chart pt-2">
+                        <div class="row">
+                            <div class="col-xl-1 fw-bold border-end border-2 border-white">JAN'22</div>
+                            <div class="col-xl-1 fw-bold border-end border-2 border-white">FEB'22</div>
+                            <div class="col-xl-1 fw-bold border-end border-2 border-white">MAR'22</div>
+                            <div class="col-xl-1 fw-bold border-end border-2 border-white">APR'22</div>
+                            <div class="col-xl-1 fw-bold border-end border-2 border-white">MAY'22</div>
+                            <div class="col-xl-1 fw-bold border-end border-2 border-white">JUN'22</div>
+                            <div class="col-xl-1 fw-bold border-end border-2 border-white">JUL'22</div>
+                            <div class="col-xl-1 fw-bold border-end border-2 border-white">AUG'22</div>
+                            <div class="col-xl-1 fw-bold border-end border-2 border-white">SEP'22</div>
+                            <div class="col-xl-1 fw-bold border-end border-2 border-white">OCT'22</div>
+                            <div class="col-xl-1 fw-bold border-end border-2 border-white">NOV'22</div>
+                            <div class="col-xl-1 fw-bold">DEC'22</div>
+                        </div>
+                        <div class="row mt-5">
+                            <div class="col-xl-5"></div>
+                            <div class="col-xl-2 bg-warning rounded-pill mb-2 inner-pill position-relative"></div>
+                            <div class="col-xl-1 bg-warning opacity-75 rounded-pill outer-pill position-absolute start-50 d-flex align-items-center text-white">15</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-7"></div>
+                            <div class="col-xl-4 bg-danger rounded-pill mb-2 inner-pill-2 position-relative"></div>
+                            <div class="col-xl-1 bg-danger opacity-50 w-25 rounded-pill mb-2 position-absolute start-50 d-flex justify-content-end align-items-center text-white">-5</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-7"></div>
+                            <div class="col-xl-2 bg-secondary rounded-pill mb-2 inner-pill position-relative"></div>
+                            <div class="col-xl-1 bg-secondary opacity-75 rounded-pill mb-2 position-absolute outer-pill3 d-flex align-items-center text-white">30</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-2 bg-success rounded-pill mb-2 text-white d-flex align-items-center">20</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>   
+          
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
